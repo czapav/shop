@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="col">
+    <br>
+    <div class="alert alert-success" role="alert" *ngIf="alertSuccess">
+      <p>Dziękujemy za zamówienie, zostało one wysłane do realizacji. Teraz oczekuje na maila, maksymalnie do 24H.</p>
+      <br>
+      <h5>W razie nie otrzymania maila skontaktuj się z nami:</h5>
+      <br>
+      <p>E-mail: sklep@sklep.pl</p>
+      <p>Telefon: +48 12 345-67-89</p>
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="alertError">
+      Coś poszło nie tak z zamówieniem.
+    </div>
+
+    <br><br>
+  </div>
+
+</div>

@@ -1,0 +1,20 @@
+.center {
+  text-align: center;
+  vertical-align: middle;
+  font-family: Verdana, serif;
+}
+
+.circle {
+  margin: auto;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #c0c6cc;
+}
+
+.circle_text {
+  line-height: 260px;
+  font-size: 100px;
+  color: #ffffff;
+  font-weight: bold;
+}

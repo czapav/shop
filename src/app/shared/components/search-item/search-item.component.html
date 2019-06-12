@@ -1,0 +1,4 @@
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+
+<app-product-box [products]="searchProducts" *ngIf="!showSpinner" [category]="category"></app-product-box>
+

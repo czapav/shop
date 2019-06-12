@@ -1,0 +1,28 @@
+<div class="container">
+    <nav class="navbar navbar-dark bg-primary navbar-expand align-text-top">
+        <a class="navbar-brand" href="#">
+            <img src="http://www.czapko.ovh/api/cart/img/logo.jpeg" width="30" height="30"
+                 class="d-inline-block align-top" alt="">
+            siatka.pl
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/cart" routerLinkActive="active">Koszyk&nbsp;<span
+                            class="badge badge-light"> <app-counter-item-cart></app-counter-item-cart>
+                        </span></a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about" routerLinkActive="active">O sklepie</a>
+                </li>
+            </ul>
+
+            <app-search-form></app-search-form>
+
+        </div>
+    </nav>
+</div>

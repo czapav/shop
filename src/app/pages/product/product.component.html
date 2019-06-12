@@ -1,0 +1,51 @@
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+
+<div class="container" *ngIf="!showSpinner">
+    <br>
+    <div class="alert alert-success" role="alert" *ngIf="badge">
+        Dodano {{product?.name}} do koszyka.
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-8 col-md-4 ">
+                    <img src="{{product?.imgUrl}}" class="card-img-top" alt="{{product?.name}}"/>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+            <div class="row">
+
+                <div class="col">
+                    <br>
+                    <span *ngIf="product?.promo === 'sale'" class="badge badge badge-danger">{{product?.promo}}</span>
+                    <span *ngIf="product?.promo === 'new'" class="badge badge badge-success">{{product?.promo}}</span>
+                    <h2>{{product?.name}}</h2>
+                    <p><strong class="text-primary h4">{{product?.price}} zł</strong></p>
+
+                    <div class="row">
+                        <div class="col-2">Ilość:</div>
+                        <div class="col-4">
+                            <app-counter (emitCounter)="getCounterProductEmit($event)" [receivedParentCounter]="counter"></app-counter>
+                        </div>
+                    </div>
+                    <p>
+                        <button type="button" class="btn btn-outline-primary"
+                                (click)="addProductToCart(product?._id)">Dodaj do
+                            koszyka
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-auto">
+            <button type="button" class="btn btn-outline-primary" (click)="goBack()">Wróc do poprzedniej strony
+            </button>
+        </div>
+    </div>
+    <br>
+</div>

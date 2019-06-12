@@ -1,0 +1,17 @@
+<div class="input-group mb-3" style="max-width: 120px;">
+    <div class="input-group-prepend">
+        <button class="btn btn-outline-primary js-btn-minus" type="button" (click)="decrement()">−</button>
+    </div>
+    <input #boxCounter type="text" class="form-control text-center" [ngModel]="counterProduct"
+           (blur)="update(boxCounter.value)"
+           placeholder=""
+           aria-label="" aria-describedby="button-addon1">
+    <div class="input-group-append">
+        <button class="btn btn-outline-primary js-btn-plus" type="button" (click)="increment()">+</button>
+    </div>
+</div>
+
+
+
+
+
